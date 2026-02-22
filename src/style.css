@@ -1,0 +1,159 @@
+/* General Body Styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+/* CV Container */
+#cv-container {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Sidebar (Left Column) */
+.sidebar {
+  width: 35%;
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-right: 1px solid #e9ecef;
+}
+
+.sidebar h2 {
+  color: #C0392B; /* Crimson Accent Color */
+  border-bottom: 2px solid #C0392B;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+}
+
+.sidebar h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.personal-details .detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.personal-details .icon {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.personal-details a {
+  color: #333;
+  text-decoration: none;
+}
+
+.personal-details a:hover {
+  text-decoration: underline;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  background-color: #e9ecef;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-bottom: 8px;
+  font-size: 0.9em;
+}
+
+
+/* Main Content (Right Column) */
+.main-content {
+  width: 65%;
+  padding: 30px;
+}
+
+.cv-header {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.cv-header h1 {
+  font-size: 2.8em;
+  color: #C0392B; /* Crimson Accent Color */
+  margin: 0;
+}
+
+.cv-header .job-title {
+  font-size: 1.5em;
+  color: #555;
+  margin: 0;
+}
+
+.download-btn {
+  display: inline-block;
+  background-color: #C0392B;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #a53125;
+}
+
+/* Styles for PDF Generation */
+.printing {
+  box-shadow: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+.main-content h2 {
+  font-size: 1.6em;
+  color: #C0392B; /* Crimson Accent Color */
+  border-bottom: 2px solid #C0392B;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.entry {
+  margin-bottom: 20px;
+}
+
+.entry h3 {
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+.entry p {
+  margin: 0;
+  color: #555;
+}
+
+.entry ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  color: #555;
+}
