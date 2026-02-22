@@ -1,5 +1,6 @@
 <template>
   <div id="cv-container">
+    <div class="pdf-container">
     <aside class="sidebar">
       <section class="personal-details">
         <h2>Personal Details</h2>
@@ -43,9 +44,9 @@
 
         <h3>DevOps & Infrastructure</h3>
         <ul>
-          <li>Docker</li>
           <li>Red Hat OpenShift</li>
           <li>GitLab CI/CD</li>
+          <li>Docker</li>
           <li>AWS</li>
         </ul>
 
@@ -61,7 +62,6 @@
       <header class="cv-header">
         <h1>Israel Benisti</h1>
         <p class="job-title">Full Stack Developer</p>
-        <a @click="downloadPDF" class="download-btn no-print">Download PDF</a>
       </header>
       <section id="profile">
         <h2>Professional Profile</h2>
@@ -120,38 +120,11 @@
        </section>
     </main>
   </div>
+  </div>
 </template>
 
 <script>
-import html2pdf from 'html2pdf.js';
-
 export default {
-  name: 'CV',
-  methods: {
-    downloadPDF() {
-      const element = document.getElementById('cv-container');
-      // Temporarily add a class to the root element to style for printing
-      element.classList.add('printing');
-
-      const opt = {
-        margin:       0,
-        filename:     'Israel-Benisti-CV.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true },
-        // By omitting the jsPDF format, it will default to the element's size, creating a single page
-        jsPDF:        { unit: 'in', orientation: 'portrait' } 
-      };
-
-      html2pdf().from(element).set(opt).save().then(() => {
-        // Remove the class after the PDF is generated
-        element.classList.remove('printing');
-      });
-    }
-  }
+  name: 'CV'
 }
 </script>
-<style>
-.icon{
-  height: 19px;
-}
-</style>
